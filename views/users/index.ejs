@@ -1,0 +1,13 @@
+<table>
+  <% for (var i in users) { %>        
+     <tr>
+        <td>
+           <%= users[i].name %>
+        </td>
+        <td>    <a href="/users/<%= users[i].id %>?_method=DELETE" 
+                   onClick="return confirm('Borrar cuenta: <%= users[i].name %>');" >
+                   Borrar </a> 
+        </td>
+     </tr> 
+  <% } %>
+</table>
